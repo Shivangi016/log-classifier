@@ -72,22 +72,7 @@ def call_batch(logs: list):
         return None, "connection_error"
     except Exception as e:
         return None, str(e)
-
-# ── Sidebar ──
-with st.sidebar:
-    st.title("🔍 Log Classifier")
-    st.markdown("---")
-
-    # API status check
-    try:
-        r = requests.get(f"{API_URL}/health", timeout=3)
-        if r.status_code == 200:
-            st.success("✅ API is online")
-        else:
-            st.error("❌ API error")
-    except:
-        st.error("❌ API offline")
-        st.info("Start it with:\n```\nuvicorn app.main:app --reload\n```")
+st.success("✅ System ready")
 
     st.markdown("---")
     st.markdown("### How it works")
