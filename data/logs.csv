@@ -1,0 +1,81 @@
+log_message,label
+GET /index.html HTTP/1.1 200 OK,HTTP_SUCCESS
+POST /api/login HTTP/1.1 200 OK,HTTP_SUCCESS
+GET /dashboard HTTP/1.1 200 OK,HTTP_SUCCESS
+PUT /api/profile HTTP/1.1 200 OK,HTTP_SUCCESS
+GET /home HTTP/1.1 200 OK,HTTP_SUCCESS
+POST /api/register HTTP/1.1 201 Created,HTTP_SUCCESS
+DELETE /api/session HTTP/1.1 204 No Content,HTTP_SUCCESS
+GET /api/products HTTP/1.1 200 OK,HTTP_SUCCESS
+POST /api/orders HTTP/1.1 201 Created,HTTP_SUCCESS
+GET /api/users HTTP/1.1 200 OK,HTTP_SUCCESS
+GET /missing-page HTTP/1.1 404 Not Found,HTTP_ERROR
+POST /api/data HTTP/1.1 404 Not Found,HTTP_ERROR
+GET /favicon.ico HTTP/1.1 404 Not Found,HTTP_ERROR
+POST /api/login HTTP/1.1 500 Internal Server Error,HTTP_ERROR
+GET /api/users HTTP/1.1 500 Internal Server Error,HTTP_ERROR
+PUT /api/settings HTTP/1.1 403 Forbidden,HTTP_ERROR
+GET /admin HTTP/1.1 401 Unauthorized,HTTP_ERROR
+POST /api/upload HTTP/1.1 400 Bad Request,HTTP_ERROR
+GET /api/reports HTTP/1.1 503 Service Unavailable,HTTP_ERROR
+DELETE /api/user HTTP/1.1 500 Internal Server Error,HTTP_ERROR
+NullPointerException at com.app.Service.process(Service.java:42),APPLICATION_ERROR
+NullPointerException at com.app.Main.run(Main.java:15),APPLICATION_ERROR
+ArrayIndexOutOfBoundsException at utils.Parser.parse(Parser.java:88),APPLICATION_ERROR
+ClassNotFoundException: com.driver.MySQLDriver at Loader.java:23,APPLICATION_ERROR
+StackOverflowError at com.app.Recursive.call(Recursive.java:10),APPLICATION_ERROR
+IllegalArgumentException: invalid input at Validator.java:55,APPLICATION_ERROR
+RuntimeException: unexpected error in PaymentService.java:101,APPLICATION_ERROR
+OutOfMemoryError: Java heap space at DataProcessor.java:77,APPLICATION_ERROR
+NumberFormatException: For input string 'abc' at Parser.java:34,APPLICATION_ERROR
+IndexOutOfBoundsException at ListHandler.process(ListHandler.java:19),APPLICATION_ERROR
+Connection refused: database host unreachable,DATABASE_ERROR
+Timeout expired while connecting to database after 30s,DATABASE_ERROR
+Database connection pool exhausted: max 10 connections reached,DATABASE_ERROR
+FATAL ERROR: MySQL server has gone away,DATABASE_ERROR
+Could not execute query: deadlock detected on table users,DATABASE_ERROR
+Database disk quota exceeded on server db-01,DATABASE_ERROR
+Replication lag detected: replica is 120 seconds behind master,DATABASE_ERROR
+Failed to connect to MongoDB at localhost:27017,DATABASE_ERROR
+PostgreSQL ERROR: relation users does not exist,DATABASE_ERROR
+Redis connection timeout after 5000ms,DATABASE_ERROR
+User admin logged in successfully from 192.168.1.10,AUTH_SUCCESS
+User john_doe logged in successfully from 10.0.0.5,AUTH_SUCCESS
+User jane_smith authenticated successfully via OAuth,AUTH_SUCCESS
+API key validated successfully for client app-dashboard,AUTH_SUCCESS
+User bob logged in successfully after password reset,AUTH_SUCCESS
+Service account deploy-bot authenticated successfully,AUTH_SUCCESS
+Two-factor authentication passed for user alice,AUTH_SUCCESS
+SSO login successful for user mark@company.com,AUTH_SUCCESS
+Password changed successfully for user carol,AUTH_SUCCESS
+User david logged in successfully via LDAP,AUTH_SUCCESS
+Failed login attempt for user admin from 192.168.1.99,AUTH_FAILURE
+Failed login attempt for user unknown_user: invalid credentials,AUTH_FAILURE
+Authentication token expired for user jane at 14:32:01,AUTH_FAILURE
+Rate limit exceeded for IP 203.0.113.42: too many login attempts,AUTH_FAILURE
+Account locked after 5 failed attempts for user mike,AUTH_FAILURE
+Invalid API key provided by client mobile-app,AUTH_FAILURE
+OAuth token validation failed: token has been revoked,AUTH_FAILURE
+Password reset link expired for user sarah,AUTH_FAILURE
+Unauthorized access attempt to /admin by user guest,AUTH_FAILURE
+JWT signature verification failed for user tom,AUTH_FAILURE
+CPU usage at 95% for the last 5 minutes on server web-01,SYSTEM_WARNING
+Memory usage exceeded 90% threshold on worker-node-3,SYSTEM_WARNING
+Disk space critically low on /dev/sda1: only 2GB remaining,SYSTEM_WARNING
+SSL certificate for api.example.com expires in 7 days,SYSTEM_WARNING
+High network latency detected: 850ms average on eth0,SYSTEM_WARNING
+Too many open file descriptors: 95% of limit reached,SYSTEM_WARNING
+Swap memory usage at 80% on database server db-02,SYSTEM_WARNING
+Load average exceeded threshold: 14.5 on 8-core machine,SYSTEM_WARNING
+Thread pool nearly exhausted: 98 of 100 threads in use,SYSTEM_WARNING
+Unhandled exception rate spiked to 45 errors per minute,SYSTEM_WARNING
+Application started successfully on port 8080,SYSTEM_INFO
+Configuration loaded from config.yaml successfully,SYSTEM_INFO
+Cache cleared successfully by scheduled maintenance job,SYSTEM_INFO
+Scheduled job DailyBackupJob completed successfully in 4m 32s,SYSTEM_INFO
+Database migration v2.3.1 applied successfully,SYSTEM_INFO
+Service restarted successfully after config update,SYSTEM_INFO
+Health check passed: all 5 services are running,SYSTEM_INFO
+Deployment of version 3.1.4 completed successfully,SYSTEM_INFO
+Log rotation completed: archived 30 days of logs,SYSTEM_INFO
+New worker node worker-05 joined the cluster successfully,SYSTEM_INFO
