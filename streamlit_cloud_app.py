@@ -196,19 +196,19 @@ with tab1:
                 st.markdown(
                     f"<div style='background:{bg};padding:16px;border-radius:10px;text-align:center'>"
                     f"<div style='font-size:13px;color:#666'>Label</div>"
-                    f"<div style='font-size:20px;font-weight:600'>{icon} {result['label']}</div>"
+                    f"<div style='font-size:20px;font-weight:600;color:#222';color:#222'>{icon} {result['label']}</div>"
                     f"</div>", unsafe_allow_html=True)
             with c2:
                 st.markdown(
                     f"<div style='background:{conf_color};padding:16px;border-radius:10px;text-align:center'>"
                     f"<div style='font-size:13px;color:#666'>Confidence</div>"
-                    f"<div style='font-size:20px;font-weight:600'>{conf_pct}%</div>"
+                    f"<div style='font-size:20px;font-weight:600;color:#222';color:#222'>{conf_pct}%</div>"
                     f"</div>", unsafe_allow_html=True)
             with c3:
                 st.markdown(
                     f"<div style='background:{m_bg};padding:16px;border-radius:10px;text-align:center'>"
                     f"<div style='font-size:13px;color:#222'>Method</div>"
-                    f"<div style='font-size:18px;font-weight:600'>{m_icon} {result['method']}</div>"
+                    f"<div style='font-size:18px;font-weight:600;color:#222';color:#222'>{m_icon} {result['method']}</div>"
                     f"</div>", unsafe_allow_html=True)
             st.markdown(
                 f"<div style='background:#f8f9fa;border-left:4px solid #667;"
