@@ -207,7 +207,7 @@ with tab1:
             with c3:
                 st.markdown(
                     f"<div style='background:{m_bg};padding:16px;border-radius:10px;text-align:center'>"
-                    f"<div style='font-size:13px;color:#666'>Method</div>"
+                    f"<div style='font-size:13px;color:#222'>Method</div>"
                     f"<div style='font-size:18px;font-weight:600'>{m_icon} {result['method']}</div>"
                     f"</div>", unsafe_allow_html=True)
             st.markdown(
